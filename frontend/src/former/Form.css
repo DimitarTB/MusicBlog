@@ -1,0 +1,376 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+*:focus {
+    outline: 0;
+}
+
+/* :root {
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    
+    --primary: #8950FC;
+    --secondary: #E4E6EF;
+    
+    --gray: #7E8299;
+    --grey-light: #b5b5c4;
+    --gray-dark: #3F4254;
+    
+    --info: #6993FF;
+    --warning: #FFA800;
+    --danger: #F64E60;
+    --success: #1BC5BD;
+
+    --light: #F3F6F9;
+    --dark: #181C32;
+    --white: #ffffff;
+} */
+
+:root {
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    
+    --primary: #f2a365;
+    --secondary: #E4E6EF;
+    
+    --gray: #7E8299;
+    --grey-light: #b5b5c4;
+    --gray-dark: #ececec;
+    --dark-gray: #ececec !important;
+    
+    --info: #6993FF;
+    --warning: #FFA800;
+    --danger: #F64E60;
+    --success: #1BC5BD;
+
+    --light: #222831;
+    --dark: #181C32;
+    --white: #30475e;
+}
+
+
+* {
+    --cl-color-primary: var(--primary) !important;
+    --cl-color-primary-light: var(--primary) !important;
+}
+
+.form-parent {
+    max-width: 950px;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0px auto;
+    box-shadow: 0 10px 30px 0 rgba(82,63,105,.1);
+    background: var(--white);
+    border-radius: .42rem;
+    padding-bottom: 50px;
+}
+
+.form-parent > form > .info {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: .42rem;
+    text-align: center;
+}
+
+.form-parent > form > .info.warning {
+    background: var(--warning);
+    color: var(--white);
+}
+
+.form-parent > form > .info.error {
+    background: var(--danger);
+    color: var(--white);
+}
+
+.form-parent > form > .info.loading {
+    background: var(--info);
+    color: var(--white);
+}
+
+.form-parent > form > .info.success {
+    background: var(--success);
+    color: var(--white);
+}
+
+.form-parent > form > .info.undetermined {
+    background: var(--grey);
+    color: var(--white);
+}
+
+.form-parent > h3 {
+    font-weight: 500;
+    font-size: 1.275rem;
+    color: var(--primary);
+    background-color: var(--light);
+    border-bottom: 1px solid #ebedf3;
+    padding: 30px 5%;
+}
+
+
+.form-parent > form {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-parent > form > button {
+    background-color: var(--primary);
+    border: none;
+    color: var(--white);
+    max-width: 250px;
+    min-width: 250px;
+    margin: 20px 0px 20px calc(100% - 250px);
+    padding: 10px;
+    cursor: pointer;
+    transition: 150ms;
+    border-radius: .42rem;
+}
+
+.form-parent > form > button:hover {
+    opacity: 0.9;
+}
+
+.form-parent > form > .form-component {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.form-parent > form > .form-component > label {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin-bottom: 7px;
+}
+
+.form-parent > form > .form-component > label,
+.form-parent > form > .form-component > input {
+    z-index: 0;
+}
+
+.form-parent > form > .form-component > input,
+.form-parent > form > .form-component > textarea {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 6px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    border: 1px solid var(--grey-light);
+    border: none;
+    border-radius: .42rem;
+    box-sizing: border-box;
+    background: #50608e;
+}
+
+.form-parent > form > .form-component > textarea {
+    font-family: sans-serif;
+    height: 70px;
+    resize: none;
+}
+
+.form-parent > form > .form-component > input:focus,
+.form-parent > form > .form-component > textarea:focus {
+    border-color: var(--primary);
+}
+
+.form-parent > form > .select {
+    position: relative;
+}
+
+.form-parent > form > .select > .select-options {
+    display: block;
+    position: absolute;
+    top: 75px;
+    max-height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--primary);
+    border-radius: .25rem;
+    z-index: 3;
+    background: var(--white);
+    transition: 300ms;
+    overflow: hidden;
+}
+
+.form-parent > form > .select > .select-options.hidden {
+    display: none
+}
+
+.form-parent > form > .select > .select-options > ul {
+    overflow-y: scroll;
+    max-height: 200px;
+}
+
+.form-parent > form > .select > .select-options > ul::-webkit-scrollbar {
+    width: 7px;
+}
+
+.form-parent > form > .select > .select-options > ul::-webkit-scrollbar-track {
+    background: #FFF;
+}
+
+.form-parent > form > .select > .select-options > ul::-webkit-scrollbar-thumb {
+    background: var(--gray);
+}
+
+.form-parent > form > .select > .select-options > ul > li {
+    padding: .6875rem .75rem;
+    cursor: pointer;
+    user-select: none;
+    color: var(--grey-light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 180ms;
+}
+
+.form-parent > form > .select > .select-options > ul > li:hover {
+    background: var(--light);
+}
+
+.form-parent > form > .select > .select-options > ul > li.checked {
+    color: var(--gray-dark);
+}
+
+.form-parent > form > .select > .select-options > ul > li > span {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    background: var(--secondary);
+    color: var(--light);
+    transition: 100ms;
+}
+
+.form-parent > form > .select > .select-options > ul > li.checked > span {
+    background: var(--light);
+    color: #FFF;
+}
+
+.form-parent > form > .select > .select-options > ul > li > span > svg {
+    width: 70%;
+    height: 70%;
+}
+
+.form-parent > form > .select > .select-options > input {
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(1.15em + 1.2rem + 4px);
+    padding: .35rem .75rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid var(--primary);
+    font-weight: 400;
+    line-height: 1.5;
+    z-index: 3;
+    background: #50608e;
+    color: var(--grey-light);
+}
+
+.form-parent > form > .form-component.file > span {
+    display: flex;
+    width: 100%;
+    height: calc(1.5em + .75rem + 6px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    /* border: 1px solid var(--grey-light); */
+    border: none;
+    border-radius: .42rem;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    position: relative;
+    background: #50608E;
+}
+
+.form-parent > form > .form-component.file > span > * {
+    cursor: pointer;
+}
+
+.form-parent > form > .form-component.file > span > input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.form-parent > form > .form-component.file > span > p {
+    position: absolute;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    z-index: 0;
+}
+
+.form-parent > form > .form-component.file > span > button {
+    background: var(--primary);
+    border: none;
+    color: var(--white);
+    padding: 0px 10px;
+    border-radius: .2rem;
+}
+
+.form-parent > form > .form-component > .DatePicker {
+    display: flex;
+    width: 100%;
+    height: calc(1.5em + .75rem + 6px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    border: 1px solid var(--grey-light);
+    border: none;
+    border-radius: .42rem;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+    background: #50608E;
+}
+
+.form-parent > form > .form-component > .DatePicker > div {
+    z-index: 10 !important;
+    background: #50608E;
+}
+
+.form-parent > form > .form-component > .DatePicker > input {
+    width: 100% !important;
+    border: none;
+    font-size: 1.02em;
+    color: var(--grey-light) !important;
+    background: #50608E;
+}

@@ -1,0 +1,272 @@
+
+.home > .top {
+    height: 250px;
+    background-image: url("../../../static/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home > .top > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(242,163,101,0.5);
+    background: radial-gradient(circle, rgba(242,163,101,0.5) 0%, rgba(242,135,101,0.5) 50%, rgba(242,135,101,0.5) 100%); 
+    height: 100%;
+}
+
+.home > .top > div > input {
+    background-color: var(--light);
+    border: none;
+    width: 450px;
+    padding: 12px;
+    color: #FFF;
+    border-radius: .42rem;
+}
+
+.home > .bottom {
+    background: #121821;
+    padding: 30px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 200px);
+}
+
+
+.album-card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    background: var(--white);
+    color: var(--gray-dark);
+    border-radius: .42rem;
+    margin: 12px 30px;
+}
+
+.album-card > img {
+    width: 100%;
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.album-card > span {
+    padding: 12px;
+}
+
+.album-card > span > h3 {
+    margin-bottom: 8px;
+}
+
+.album-card > span > h3 > a {
+    color: var(--primary);
+}
+
+.create-album {
+    padding-top: 70px;
+    min-height: calc(100vh - 70px);
+    background: #121821;
+}
+
+.manage-album,
+.manage-track {
+    background: #121821;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+.manage-album > .top,
+.manage-track > .top {
+    width: 950px;
+    margin: 0px auto 50px auto;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.manage-track > .top {
+    margin-bottom: 0px;
+}
+
+.manage-album > .top > div,
+.manage-track > .top > div {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.manage-album > .top > div > h1,
+.manage-album > .top > div > h3,
+.manage-track > .top > div > h1,
+.manage-track > .top > div > h3 {
+    color: var(--primary);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+}
+
+.manage-album > .top > div > pre,
+.manage-track > .top > div > pre {
+    color: var(--dark-gray);
+    margin: 30px 0px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 12px;
+}
+
+.manage-album > .bottom,
+.manage-track > .bottom {
+    width: 950px;
+    margin: 20px auto 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.manage-track > .bottom {
+    margin-top: 0px;
+}
+
+.manage-track > .bottom {
+    flex-direction: column;
+}
+
+.track-card {
+    display: inline-flex;
+    flex-direction: column;
+    width: 195px;
+    height: 250px;
+    overflow: hidden;
+    background: var(--white);
+    color: var(--gray-dark);
+    border-radius: .42rem;
+    margin: 12px 30px 12px 0px;
+}
+
+.track-card > img {
+    width: 100%;
+    min-height: 180px;
+    max-height: 180px;
+}
+
+.track-card > h3 {
+    padding: 12px;
+}
+
+.track-card > h3 > a {
+    color: var(--primary);
+}
+
+.add-track {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    background: var(--white);
+    color: var(--primary);
+    border-radius: .42rem;
+    margin: 12px 30px 12px 0px;
+    font-size: 2.5em;
+}
+
+.content-menagment-buttons {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+}
+
+.content-menagment-buttons > span {
+    margin: 12px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-menagment-buttons > button {
+    background: var(--primary);
+    color: var(--dark);
+    border: none;
+    padding: 12px;
+    border-radius: .42rem;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.content-menagment-buttons > span > button {
+    background: var(--light);
+    color: var(--primary);
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-menagment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-menagment-form > textarea {
+    width: 600px;
+    height: 250px;
+    border: 3px solid var(--primary);
+    background: var(--light);
+    color: #FFF;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    padding: 12px;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+
+.content-container {
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+}
+
+.content-container > .content {
+    margin: 20px auto;
+}
+
+.content-container > .content-image > img {
+    width: 600px;
+}
+
+.content-container > .content-audio {
+    width: 600px;
+}
+
+.content-container > .content-lyrics {
+    font-style: italic;
+    line-height: 1.5em;
+    letter-spacing: 1px;
+}
+
+.content-container > .content-lyrics > pre {
+    position: relative;
+    overflow: unset;
+    text-align: center;
+}
+
+.content-container > .content-lyrics > pre > svg:first-child {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+}
+
+.content-container > .content-lyrics > pre > svg:last-child {
+    position: absolute;
+    bottom: -10px;
+    /* right: -20px; */
+}

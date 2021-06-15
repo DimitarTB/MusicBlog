@@ -1,0 +1,55 @@
+.nav {
+    width: 200px;
+    background: var(--light);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.nav > a {
+    width: 180px;
+    margin: 10px;
+    border-radius: .42rem;
+    padding: 12px;
+    box-sizing: border-box;
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.nav > a.selected {
+    /* background: var(--white); */
+}
+
+.nav > a.selected > span {
+    background: var(--primary);
+    color: var(--dark);
+    border-radius: 50%;
+}
+
+.nav > a > span {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.nav > a > p {
+    display: inline;
+}
+
+.nav > h3 {
+    display: block;
+    box-sizing: border-box;
+    border-radius: .42rem;
+    color: var(--primary);
+    font-size: 1.2em;
+    text-align: center;
+    width: 180px;
+    background: var(--white);
+    padding: 12px;
+    margin: 30px auto;
+    cursor: pointer;
+}
